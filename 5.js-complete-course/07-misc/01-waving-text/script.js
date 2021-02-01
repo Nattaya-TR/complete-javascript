@@ -12,5 +12,21 @@
 (function() {
 
     // your code here
+    let target = document.getElementById("target") ;
+    let text =  target.innerText;
+    target.innerText = "";
+
+    let word = text.split("");
+
+    word.forEach(function (element, i)
+        {
+            let letter = document.createElement("span");
+
+            letter.innerText = element;
+
+            letter.style.fontSize = Math.ceil((Math.sin((i + 2) * .2) * 15) + 20) + "px";
+
+            target.appendChild(letter);
+        })
 
 })();

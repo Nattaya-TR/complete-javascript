@@ -12,5 +12,18 @@
 (function() {
 
     // your code here
+    let text = document.getElementById("target").innerText;
+    let i = 0;
+    document.getElementById("target").innerText = "";
 
+    function type() {
+
+        if ( i < text.length) {
+            document.getElementById("target").innerText += text.charAt(i);
+            i++;
+            setTimeout(type,Math.floor(Math.random()*1000));
+
+        }
+    }
+    type();
 })();
